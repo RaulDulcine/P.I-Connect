@@ -97,7 +97,6 @@ Follow the steps below to run the project on your machine.
 
 Make sure you have installed:
 
-* [Git](https://git-scm.com)
 * [Python](https://www.python.org/) (v3.10 or higher)
 
 ### 2. Configuration (`.env`)
