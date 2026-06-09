@@ -3,7 +3,6 @@
 > A web platform for publishing, discovering, and evaluating the Integrative Projects (PIs) developed by Senac students. Built as a Capstone Project (*Projeto Integrador*) for the **Systems Analysis and Development Program** at **Faculdade Senac Pernambuco**.
 
 [![Senac](https://img.shields.io/badge/Institution-Senac%20Pernambuco-blue)](https://www.pe.senac.br/)
-[![ESG](https://img.shields.io/badge/Theme-ESG%20%26%20SDGs-brightgreen)](https://sdgs.un.org/goals)
 [![Status](https://img.shields.io/badge/status-In%20Development-yellow)]()
 
 ---
