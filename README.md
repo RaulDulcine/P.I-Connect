@@ -9,7 +9,7 @@
 
 ## 📋 Project Overview
 
-**PI Connect** is a digital ecosystem built to amplify the visibility of Integrative Projects produced by Senac students. The platform works as an academic repository/observatory where students publish their work, professors review and provide feedback, and partner companies discover talent and innovative solutions aligned with ESG principles and the UN Sustainable Development Goals (SDGs).
+**PI Connect** is a digital ecosystem built to amplify the visibility of Integrative Projects produced by Senac students. The platform works as an academic repository/observatory where students publish their work, professors review and provide feedback, and partner companies discover talent and innovative solutions and the UN Sustainable Development Goals (SDGs).
 
 The project was born from a real, data-driven need identified among students: **73% reported moderate to high difficulty** finding previous PIs to use as reference, and **100% considered project upload and technology-based filtering as essential features**.
 
