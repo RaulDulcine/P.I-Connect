@@ -26,7 +26,7 @@ The project was born from a real, data-driven need identified among students: **
 ## 🖥️ Screenshots
 
 ### Login Screen
-![Login Screen](screenshots/Tela_Login_-_Aluno.png)
+![Login Screen](P.I%20Connect/screenshots/Tela%20Login%20-%20Aluno.png)
 
 ---
 
@@ -34,11 +34,11 @@ The project was born from a real, data-driven need identified among students: **
 
 | Dashboard | My Projects |
 |---|---|
-| ![Student Dashboard](screenshots/DashBoard_Aluno.png) | ![My Projects](screenshots/Meus_Projetos.png) |
+| ![Student Dashboard](P.I%20Connect/screenshots/DashBoard%20Aluno.png) | ![My Projects](P.I%20Connect/screenshots/Meus%20Projetos.png) |
 
 | Academic Portfolio | Profile Settings |
 |---|---|
-| ![Academic Portfolio](screenshots/Portfolio_Academico.png) | ![Profile Settings](screenshots/Perfil_Aluno.png) |
+| ![Academic Portfolio](P.I%20Connect/screenshots/Portfolio%20Academico.png) | ![Profile Settings](P.I%20Connect/screenshots/Perfil%20Aluno.png) |
 
 ---
 
@@ -46,11 +46,11 @@ The project was born from a real, data-driven need identified among students: **
 
 | Dashboard | Supervised Projects |
 |---|---|
-| ![Professor Dashboard](screenshots/Dashboard_Professor.png) | ![Supervised Projects](screenshots/Projetos_Supervisionados.png) |
+| ![Professor Dashboard](P.I%20Connect/screenshots/Dashboard%20Professor.png) | ![Supervised Projects](P.I%20Connect/screenshots/Projetos%20Supervisionados.png) |
 
 | Project Evaluation |
 |---|
-| ![Project Evaluation](screenshots/Sistema_de_Gestao_Escolar.png) |
+| ![Project Evaluation](P.I%20Connect/screenshots/Sistema%20de%20Gestão%20Escolar.png) |
 
 ---
 
@@ -58,11 +58,11 @@ The project was born from a real, data-driven need identified among students: **
 
 | Dashboard | User Management |
 |---|---|
-| ![Admin Dashboard](screenshots/Dashboard_Administrativo.png) | ![User Management](screenshots/Gestao_de_Usuarios.png) |
+| ![Admin Dashboard](P.I%20Connect/screenshots/Dashboard%20Administrativo.png) | ![User Management](P.I%20Connect/screenshots/Gestao%20de%20Usuarios.png) |
 
 | Project Management | Reports & Statistics |
 |---|---|
-| ![Project Management](screenshots/Gestao_de_Projetos.png) | ![Reports](screenshots/Relatorios_e_Estatisticas.png) |
+| ![Project Management](P.I%20Connect/screenshots/Gestao%20de%20Projetos.png) | ![Reports](P.I%20Connect/screenshots/Relatorios%20e%20Estatisticas.png) |
 
 ---
 
@@ -107,60 +107,3 @@ Create a `.env` file in the project root and set the environment variables as sh
 ```env
 SECRET_KEY="use_a_secure_random_string_here"
 DEBUG=True
-```
-
-### 3. Setup and Execution
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/pi-connect.git
-cd pi-connect
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Apply database migrations
-python manage.py migrate
-
-# 4. Start the development server
-python manage.py runserver
-```
-
-The application will be available at `http://127.0.0.1:8000`.
-
----
-
-## ✅ Non-Functional Requirements
-
-| Category | Requirement | Description |
-|---|---|---|
-| **Security** | Data Encryption | All user passwords stored as hashed values in the database |
-| **Usability** | Responsive Design | Interface adapted for desktop, tablet, and smartphone viewing |
-| **Performance** | Response Time | Project search queries must load quickly |
-| **Availability** | System Uptime | Platform must be available for access 24/7 |
-| **Portability** | Browser Compatibility | Compatible with the latest versions of major web browsers |
-
----
-
-## 📝 Future Improvements
-
-If we had another semester, we plan to implement:
-
-* **Thematic Categorization:** Grouping projects into thematic spaces (Sustainability, Health & Well-being, Tech & AI, etc.), as suggested by users in the requirements elicitation survey.
-* **External Platform Integration:** Automatic import of GitHub repositories and LinkedIn profiles directly into the student's portfolio.
-* **Notification System:** Real-time alerts for students when their project receives an evaluation or feedback from their professor.
-* **Course Expansion:** Opening the platform to all Senac courses beyond ADS and Digital Games, serving the entire institution.
-
----
-
-## 👥 Authors & Project Team
-
-| Name | Role | Contact |
-|---|---|---|
-| **Alice Ralime dos Santos** | Designer | — |
-| **Júlia Maria Silva Parra Torres** | Project Manager | — |
-| **Raul Francisco Dulcine de Oliveira** | Front-End | — |
-| **João Vitor Lima Braga Graciliano de Melo** | Back-End | — |
-
-**Academic Advisors / Professors:** Prof. Sônia Gomes de Oliveira & Prof. Filipe Carvalho
-**Institution:** Faculdade Senac Pernambuco — Systems Analysis and Development — 2026.1
