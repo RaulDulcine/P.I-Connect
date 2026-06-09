@@ -97,7 +97,6 @@ Follow the steps below to run the project on your machine.
 
 Make sure you have installed:
 
-* [Git](https://git-scm.com)
 * [Python](https://www.python.org/) (v3.10 or higher)
 
 ### 2. Configuration (`.env`)
@@ -107,3 +106,21 @@ Create a `.env` file in the project root and set the environment variables as sh
 ```env
 SECRET_KEY="use_a_secure_random_string_here"
 DEBUG=True
+
+### 3. Setup and Execution
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/your-username/pi-connect.git](https://github.com/your-username/pi-connect.git)
+cd pi-connect
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Apply database migrations
+python manage.py migrate
+
+# 4. Start the development server
+python manage.py runserver
+
+The application will be available at http://127.0.0.1:8000.✅ Non-Functional RequirementsCategoryRequirementDescriptionSecurityData EncryptionAll user passwords stored as hashed values in the databaseUsabilityResponsive DesignInterface adapted for desktop, tablet, and smartphone viewingPerformanceResponse TimeProject search queries must load quicklyAvailabilitySystem UptimePlatform must be available for access 24/7PortabilityBrowser CompatibilityCompatible with the latest versions of major web browsers📝 Future ImprovementsIf we had another semester, we plan to implement:Thematic Categorization: Grouping projects into thematic spaces (Sustainability, Health & Well-being, Tech & AI, etc.), as suggested by users in the requirements elicitation survey.External Platform Integration: Automatic import of GitHub repositories and LinkedIn profiles directly into the student's portfolio.Notification System: Real-time alerts for students when their project receives an evaluation or feedback from their professor.Course Expansion: Opening the platform to all Senac courses beyond ADS and Digital Games, serving the entire institution.👥 Authors & Project TeamNameRoleContactAlice Ralime dos SantosDesigner—Júlia Maria Silva Parra TorresProject Manager—Raul Francisco Dulcine de OliveiraFront-End—João Vitor Lima Braga Graciliano de MeloBack-End—Academic Advisors / Professors: Prof. Sônia Gomes de Oliveira & Prof. Filipe CarvalhoInstitution: Faculdade Senac Pernambuco — Systems Analysis and Development — 2026.1
