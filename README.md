@@ -15,7 +15,7 @@ The project was born from a real, data-driven need identified among students: **
 
 ### Key Features
 
-* **PI Repository:** Publish and search Integrative Projects with filters by course, year, theme (ESG/SDG), and technologies used.
+* **PI Repository:** Publish and search Integrative Projects with filters by course, year, theme and technologies used.
 * **Academic Portfolio:** Each student has a public profile showcasing their technical skills, academic background, and project showcase — a digital portfolio for the job market.
 * **Professor Panel:** Dedicated interface for project evaluation, sending technical feedback, and tracking team progress.
 * **Admin Dashboard:** Centralized management of users and projects, plus institutional reporting with class performance metrics.
