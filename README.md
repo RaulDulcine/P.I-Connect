@@ -97,6 +97,7 @@ Follow the steps below to run the project on your machine.
 
 Make sure you have installed:
 
+* [Git](https://git-scm.com)
 * [Python](https://www.python.org/) (v3.10 or higher)
 
 ### 2. Configuration (`.env`)
@@ -106,5 +107,61 @@ Create a `.env` file in the project root and set the environment variables as sh
 ```env
 SECRET_KEY="use_a_secure_random_string_here"
 DEBUG=True
+```
 
+### 3. Setup and Execution
 
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/pi-connect.git
+cd pi-connect
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Apply database migrations
+python manage.py migrate
+
+# 4. Start the development server
+python manage.py runserver
+```
+
+The application will be available at `http://127.0.0.1:8000`.
+
+---
+
+## ✅ Non-Functional Requirements
+
+| Category | Requirement | Description |
+|---|---|---|
+| **Security** | Data Encryption | All user passwords stored as hashed values in the database |
+| **Usability** | Responsive Design | Interface adapted for desktop, tablet, and smartphone viewing |
+| **Performance** | Response Time | Project search queries must load quickly |
+| **Availability** | System Uptime | Platform must be available for access 24/7 |
+| **Portability** | Browser Compatibility | Compatible with the latest versions of major web browsers |
+
+---
+
+## 📝 Future Improvements
+
+If we had another semester, we plan to implement:
+
+- **Thematic Categorization:** Grouping projects into thematic spaces (Sustainability, Health & Well-being, Tech & AI, etc.), as suggested by users in the requirements elicitation survey.
+- **External Platform Integration:** Automatic import of GitHub repositories and LinkedIn profiles directly into the student's portfolio.
+- **Notification System:** Real-time alerts for students when their project receives an evaluation or feedback from their professor.
+- **Course Expansion:** Opening the platform to all Senac courses beyond ADS and Digital Games, serving the entire institution.
+
+---
+
+## 👥 Authors & Project Team
+
+| Name | Role | Contact |
+|---|---|---|
+| Alice Ralime dos Santos | Designer | — |
+| Júlia Maria Silva Parra Torres | Project Manager | — |
+| Raul Francisco Dulcine de Oliveira | Front-End | — |
+| João Vitor Lima Braga Graciliano de Melo | Back-End | — |
+
+**Academic Advisors / Professors:** Prof. Sônia Gomes de Oliveira & Prof. Filipe Carvalho
+
+**Institution:** Faculdade Senac Pernambuco — Systems Analysis and Development — 2026.1
