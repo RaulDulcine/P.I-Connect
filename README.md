@@ -103,8 +103,9 @@ Make sure you have installed:
 Create a `.env` file in the project root and set the environment variables as shown below:
 
 ```env
-SECRET_KEY="use_a_secure_random_string_here"
-DEBUG=True
+SECRET_KEY = 'django-insecure-alguma-coisa-muito-longa-aqui'
+
+DEBUG = True
 ```
 
 ### 3. Setup and Execution
