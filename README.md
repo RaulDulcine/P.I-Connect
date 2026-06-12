@@ -113,7 +113,7 @@ DEBUG = True
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/pi-connect.git
+git clone https://github.com/RaulDulcine/P.I-Connect.git
 cd pi-connect
 
 # 2. Install dependencies
