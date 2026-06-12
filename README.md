@@ -165,6 +165,3 @@ If we had another semester, we plan to implement:
 **Academic Advisors / Professors:** Prof. Sônia Gomes de Oliveira & Prof. Filipe Carvalho
 
 **Institution:** Faculdade Senac Pernambuco — Systems Analysis and Development — 2026.1
-
-## 📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
