@@ -93,10 +93,11 @@ The platform operates with three distinct access levels:
 Follow the steps below to run the project on your machine.
 
 ### 1. Prerequisites
-
 Make sure you have installed:
 
-* [Python](https://www.python.org/) (v3.10 or higher)
+- [Python](https://www.python.org/) (v3.10 or higher)
+
+> No additional database setup required — the project uses SQLite, which is bundled with Python.
 
 ### 2. Configuration (`.env`)
 
