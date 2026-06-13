@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PI Connect - Login</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    :root {
+      /* Paleta de cores */
+      --purple-primary: #7C3AED;
+      --purple-dark: #5B21B6;
+      --blue-primary: #1E40AF;
+      --blue-sidebar: #1E40AF;
+      --orange-primary: #EA580C;
+      --orange-sidebar: #C2410C;
+      --gray-200: #E5E7EB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --white: #FFFFFF;
+      --bg-main: #F9FAFB;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg-main); color: var(--gray-900); font-size: 14px; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; }
+    input { font-family: inherit; }
+
+    .page { display: none; }
+    .page.active { display: flex; }
+
+    #page-login {
+      min-height: 100vh;
+      flex-direction: row;
+    }
+
+    .login-left {
+      width: 45%;
+      background-color: var(--blue-primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 56px;
+      color: var(--white);
+      transition: background-color 0.4s ease;
+    }
+
+    .login-left.theme-aluno { background-color: var(--blue-primary); }
+    .login-left.theme-professor { background-color: var(--orange-primary); }
+    .login-left.theme-admin { background-color: var(--purple-primary); }
+
+    .login-left .brand-icon { width: 52px; height: 52px; margin-bottom: 20px; }
+    .login-left h1 { font-size: 36px; font-weight: 800; margin-bottom: 10px; }
+    .login-left .tagline { font-size: 15px; opacity: 0.85; margin-bottom: 44px; line-height: 1.6; }
+    .login-left ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .login-left ul li { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .login-left ul li::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.7); flex-shrink: 0;
+    }
+
+    .login-right {
+      flex: 1; display: flex; align-items: center;
+      justify-content: center; padding: 40px; background: var(--white);
+    }
+    .login-form-box { width: 100%; max-width: 420px; }
+    .login-form-box h2 { font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+    .login-form-box .subtitle { color: var(--gray-500); margin-bottom: 28px; font-size: 14px; }
+
+    .role-tabs {
+      display: flex; border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md); overflow: hidden; margin-bottom: 24px;
+    }
+    .role-tab {
+      flex: 1; padding: 10px 12px; text-align: center; font-size: 13px;
+      font-weight: 500; background: var(--white); color: var(--gray-600);
+      cursor: pointer; transition: all .2s; border: none;
+    }
+    .role-tab.active { background: var(--purple-primary); color: var(--white); font-weight: 600; }
+    .role-tab.active.orange { background: var(--orange-primary); }
+    .role-tab.active.blue { background: var(--blue-primary); }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-weight: 600; font-size: 13px; margin-bottom: 6px; }
+    .input-wrap {
+      display: flex; align-items: center; border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm); padding: 10px 14px; gap: 10px;
+      background: var(--white); transition: border-color .2s;
+    }
+    .input-wrap:focus-within { border-color: var(--purple-primary); }
+    
+    .input-wrap svg, .input-wrap i { color: var(--gray-400); flex-shrink: 0; width: 16px; height: 16px; }
+    
+    .input-wrap input {
+      border: none; outline: none; flex: 1; font-size: 14px;
+      color: var(--gray-700); background: transparent;
+    }
+
+    .form-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .checkbox-label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-600); cursor: pointer; }
+    .forgot-link { font-size: 13px; color: var(--purple-primary); font-weight: 500; cursor: pointer; }
+
+    .btn-login {
+      width: 100%; padding: 13px; background: var(--purple-primary); color: var(--white);
+      font-size: 15px; font-weight: 600; border-radius: var(--radius-sm); border: none;
+      cursor: pointer; transition: background .2s;
+    }
+    .btn-login:hover { background: var(--purple-dark); }
+    .btn-login.orange { background: var(--orange-primary); }
+    .btn-login.orange:hover { background: var(--orange-sidebar); }
+    .btn-login.blue { background: var(--blue-primary); }
+    .btn-login.blue:hover { background: var(--blue-sidebar); }
+
+    .register-row { text-align: center; margin-top: 18px; font-size: 13px; color: var(--gray-500); }
+    .register-row a { color: var(--purple-primary); font-weight: 500; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<div id="page-login" class="page active">
+  <div class="login-left theme-aluno">
+    <i data-lucide="graduation-cap" class="brand-icon" style="color: white;"></i>
+    
+    <h1>PI Connect</h1>
+    <p class="tagline">Repositório Digital e Observatório de Projetos Integradores</p>
+    <ul>
+      <li>Compartilhe seus projetos</li>
+      <li>Construa seu portfólio acadêmico</li>
+      <li>Conecte-se com a comunidade</li>
+    </ul>
+  </div>
+
+  <div class="login-right">
+    <div class="login-form-box">
+      <h2>Bem-vindo de volta</h2>
+      <p class="subtitle">Entre com suas credenciais para acessar</p>
+
+      <div class="role-tabs">
+        <button class="role-tab active blue" id="tab-aluno" type="button" onclick="setRole('aluno')">Aluno</button>
+        <button class="role-tab" id="tab-professor" type="button" onclick="setRole('professor')">Professor</button>
+        <button class="role-tab" id="tab-admin" type="button" onclick="setRole('admin')">Administrador</button>
+      </div>
+
+      <form id="login-form" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <div class="input-wrap">
+            <i data-lucide="mail"></i>
+            <input type="email" id="email" name="email" placeholder="seu.email@senac.br" required
+              oninvalid="this.setCustomValidity(this.value ? 'Insira um e-mail válido (ex: nome@senac.br)' : 'Preencha o campo de e-mail')"
+              oninput="this.setCustomValidity('')" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <div class="input-wrap">
+            <i data-lucide="lock"></i>
+            <input type="password" id="senha" name="senha" placeholder="••••••••" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" name="lembrar" id="lembrar" /> Lembrar de mim
+          </label>
+          <span class="forgot-link">Esqueci minha senha</span>
+        </div>
+
+        <button type="submit" class="btn-login blue" id="btn-entrar">Entrar</button>
+      </form>
+
+      <p class="register-row">Não tem uma conta? <a onclick="alert('Cadastro não disponível nesta demo.')">Criar conta</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  lucide.createIcons();
+
+  let currentRole = 'aluno';
+
+  function setRole(role) {
+    currentRole = role;
+
+    const tabs = document.querySelectorAll('.role-tab');
+    const loginLeft = document.querySelector('.login-left');
+    const btnEntrar = document.getElementById('btn-entrar');
+    const currentTab = document.getElementById(`tab-${role}`);
+
+    tabs.forEach(t => t.classList.remove('active', 'orange', 'blue'));
+    loginLeft.classList.remove('theme-aluno', 'theme-professor', 'theme-admin');
+    btnEntrar.className = 'btn-login';
+
+    currentTab.classList.add('active');
+
+    if (role === 'aluno') {
+      currentTab.classList.add('blue');
+      btnEntrar.classList.add('blue');
+      loginLeft.classList.add('theme-aluno');
+    } 
+    else if (role === 'professor') {
+      currentTab.classList.add('orange');
+      btnEntrar.classList.add('orange');
+      loginLeft.classList.add('theme-professor');
+    } 
+    else if (role === 'admin') {
+      loginLeft.classList.add('theme-admin');
+    }
+  }
+
+  function handleLogin(e) {
+    e.preventDefault();
+
+    if (currentRole === 'aluno') {
+      window.location.href = './Aluno/aluno.html';
+    } 
+    else if (currentRole === 'professor') {
+      window.location.href = './professor/dashboard.html';
+    } 
+    else if (currentRole === 'admin') {
+      window.location.href = './administrador/admin.html';
+    }
+  }
+</script>
+
+</body>
+</html>

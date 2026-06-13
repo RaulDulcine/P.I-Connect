@@ -1,0 +1,319 @@
+.voltar {
+  margin-bottom: 20px;
+}
+
+.voltar a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #444;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.voltar a:hover {
+  color: #f05a00;
+}
+
+.voltar svg {
+  width: 16px;
+  height: 16px;
+}
+
+.avaliacao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.avaliacao-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.avaliacao-header p {
+  font-size: 14px;
+  color: #888;
+}
+
+.avaliacao-corpo {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.avaliacao-esquerda {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.avaliacao-direita {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.secao-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.secao-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.secao-card h3 svg {
+  width: 18px;
+  height: 18px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.info-label svg {
+  width: 14px;
+  height: 14px;
+}
+
+.info-valor-bold {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.info-valor-sub {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.texto-descricao {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.lista-objetivos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lista-objetivos li {
+  font-size: 14px;
+  color: #444;
+  padding-left: 16px;
+  position: relative;
+}
+
+.lista-objetivos li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #f05a00;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f05a00;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-download svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-download:hover {
+  opacity: 0.7;
+}
+
+.comentario {
+  padding: 16px 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+.comentario-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.comentario-autor {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.comentario-data {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.comentario p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.label-secao {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.opcao-decisao {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.opcao-decisao:hover {
+  border-color: #f05a00;
+  background-color: #fff8f6;
+}
+
+.opcao-decisao svg {
+  width: 20px;
+  height: 20px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.opcao-titulo {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.opcao-sub {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.feedback-input {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  color: #444;
+  resize: none;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+
+.feedback-input:focus {
+  border-color: #f05a00;
+}
+
+.feedback-aviso {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.btn-enviar {
+  width: 100%;
+  background-color: #f05a00;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-enviar svg {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-enviar:hover {
+  background-color: #a33a0c;
+}
+
+.criterios {
+  background-color: #f05a00;
+  color: white;
+}
+
+.criterios h3 {
+  color: white;
+}
+
+.criterios ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.criterios ul li {
+  font-size: 14px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.criterios ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+.opcao-decisao.selecionado {
+  border-color: #f05a00;
+  background-color: #fff8f6;
+}
+
+.opcao-decisao.selecionado svg {
+  color: #f05a00;
+}

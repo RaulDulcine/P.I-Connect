@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>PI Connect - Perfil</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="perfil.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="pagina">
+
+    <aside class="sidebar">
+      <div class="sidebar-topo">
+        <div class="sidebar-logo">
+          <h2>PI Connect</h2>
+          <p>Painel do Professor</p>
+        </div>
+
+        <div class="sidebar-usuario" id="btn-perfil">
+          <div class="avatar">CM</div>
+          <div>
+            <p class="nome-usuario">Prof. Carlos Mendes</p>
+            <p class="tipo-usuario">Professor</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="dashboard.html" class="menu-item">
+            <i data-lucide="layout-dashboard"></i>
+            Dashboard
+          </a>
+          <a href="projetos.html" class="menu-item">
+            <i data-lucide="folder"></i>
+            Projetos Supervisionados
+          </a>
+          <a href="avaliacoes.html" class="menu-item">
+            <i data-lucide="file-text"></i>
+            Avaliações
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-rodape">
+        <a href="../index.html" class="menu-item sair">
+          <i data-lucide="log-out"></i>
+          Sair
+        </a>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+
+      <div class="boas-vindas">
+        <h1>Configurações do Perfil</h1>
+        <p>Gerencie suas informações pessoais e configurações de conta</p>
+      </div>
+
+      <div class="perfil-card">
+        <div class="perfil-avatar-area">
+          <div class="perfil-avatar">CM</div>
+          <div class="perfil-avatar-icone">
+            <i data-lucide="user"></i>
+          </div>
+        </div>
+        <div class="perfil-info">
+          <h2>Prof. Carlos Mendes</h2>
+          <div class="perfil-detalhes">
+            <div class="perfil-detalhe">
+              <i data-lucide="mail"></i>
+              <span>carlos.mendes@senac.br</span>
+            </div>
+            <div class="perfil-detalhe">
+              <i data-lucide="phone"></i>
+              <span>(81) 98765-4321</span>
+            </div>
+            <div class="perfil-detalhe">
+              <i data-lucide="map-pin"></i>
+              <span>Recife, PE</span>
+            </div>
+            <div class="perfil-detalhe">
+              <i data-lucide="calendar"></i>
+              <span>Desde 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="secao-perfil">
+        <h3>
+          <i data-lucide="user"></i>
+          Informações Pessoais
+        </h3>
+
+        <div class="form-grid">
+          <div class="form-grupo">
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Seu nome completo">
+          </div>
+          <div class="form-grupo">
+            <label>Telefone</label>
+            <input type="text" placeholder="(00) 00000-0000">
+          </div>
+          <div class="form-grupo">
+            <label>Localização</label>
+            <input type="text" placeholder="Cidade, Estado">
+          </div>
+          <div class="form-grupo">
+            <label>Membro desde</label>
+            <input type="text" placeholder="2022" disabled>
+          </div>
+        </div>
+
+        <div class="form-grupo">
+          <label>Biografia</label>
+          <textarea placeholder="Conte um pouco sobre você..."></textarea>
+        </div>
+      </div>
+
+      <div class="secao-perfil">
+        <h3>
+          <i data-lucide="lock"></i>
+          Alterar Senha
+        </h3>
+
+        <div class="form-grupo">
+          <label>Senha Atual</label>
+          <div class="input-senha">
+            <input type="password" placeholder="Digite sua senha atual">
+            <button type="button" class="btn-olho">
+              <i data-lucide="eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-grupo">
+          <label>Nova Senha</label>
+          <div class="input-senha">
+            <input type="password" placeholder="Digite sua nova senha">
+            <button type="button" class="btn-olho">
+              <i data-lucide="eye"></i>
+            </button>
+          </div>
+          <p class="input-dica">A senha deve ter pelo menos 8 caracteres</p>
+        </div>
+
+        <div class="form-grupo">
+          <label>Confirmar Nova Senha</label>
+          <div class="input-senha">
+            <input type="password" placeholder="Confirme sua nova senha">
+            <button type="button" class="btn-olho">
+              <i data-lucide="eye"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="perfil-botoes">
+        <button class="btn-cancelar" id="btn-cancelar">Cancelar</button>
+        <button class="btn-salvar">
+          <i data-lucide="save"></i>
+          Salvar Alterações
+        </button>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script>
+    const itens = document.querySelectorAll('.menu-item');
+    itens.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (this.getAttribute('href') === '#') e.preventDefault();
+        itens.forEach(function(i) { i.classList.remove('ativo'); });
+        this.classList.add('ativo');
+      });
+    });
+
+    document.getElementById('btn-perfil').addEventListener('click', function() {
+      window.location.href = 'perfil.html';
+    });
+
+    document.getElementById('btn-cancelar').addEventListener('click', function() {
+      window.history.back();
+    });
+
+    document.querySelectorAll('.btn-olho').forEach(function(botao) {
+      botao.addEventListener('click', function() {
+        const input = this.parentElement.querySelector('input');
+        if (input.type === 'password') {
+          input.type = 'text';
+        } else {
+          input.type = 'password';
+        }
+      });
+    });
+
+    document.querySelector('.btn-salvar').addEventListener('click', function() {
+      alert('Alterações salvas com sucesso!');
+    });
+  </script>
+
+</body>
+</html>

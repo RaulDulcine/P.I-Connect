@@ -1,0 +1,23 @@
+# Ambiente virtual Python
+venv/
+env/
+.env
+
+# Banco de dados local
+backend/db.sqlite3
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Arquivos gerados
+*.docx
+backend/media/
+
+# VS Code
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

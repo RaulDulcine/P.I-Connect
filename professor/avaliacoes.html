@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>PI Connect - Avaliações</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="avaliacoes.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="pagina">
+
+    <aside class="sidebar">
+      <div class="sidebar-topo">
+        <div class="sidebar-logo">
+          <h2>PI Connect</h2>
+          <p>Painel do Professor</p>
+        </div>
+
+        <div class="sidebar-usuario" id="btn-perfil">
+          <div class="avatar">CM</div>
+          <div>
+            <p class="nome-usuario">Prof. Carlos Mendes</p>
+            <p class="tipo-usuario">Professor</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="dashboard.html" class="menu-item">
+            <i data-lucide="layout-dashboard"></i>
+            Dashboard
+          </a>
+          <a href="projetos.html" class="menu-item">
+            <i data-lucide="folder"></i>
+            Projetos Supervisionados
+          </a>
+          <a href="avaliacoes.html" class="menu-item ativo">
+            <i data-lucide="file-text"></i>
+            Avaliações
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-rodape">
+        <a href="../index.html" class="menu-item sair">
+          <i data-lucide="log-out"></i>
+          Sair
+        </a>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+
+      <div class="voltar">
+        <a href="projetos.html">
+          <i data-lucide="arrow-left"></i>
+          Voltar para Projetos Supervisionados
+        </a>
+      </div>
+
+      <div class="avaliacao-header">
+        <div>
+          <h1>Sistema de Gestão Escolar</h1>
+          <p>Avaliação de Projeto Integrador</p>
+        </div>
+        <span class="badge">Aguardando Avaliação</span>
+      </div>
+
+      <div class="avaliacao-corpo">
+
+        <div class="avaliacao-esquerda">
+
+          <div class="secao-card">
+            <h3>Informações do Projeto</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-label">
+                  <i data-lucide="user"></i>
+                  Estudante
+                </div>
+                <p class="info-valor-bold">João Vitor</p>
+                <p class="info-valor-sub">joao.vitor@senac.br</p>
+              </div>
+              <div class="info-item">
+                <div class="info-label">
+                  <i data-lucide="book-open"></i>
+                  Curso
+                </div>
+                <p class="info-valor-bold">Análise e Desenvolvimento de Sistemas</p>
+              </div>
+              <div class="info-item">
+                <div class="info-label">
+                  <i data-lucide="tag"></i>
+                  Tema
+                </div>
+                <p class="info-valor-bold">ODS 4 - Educação de Qualidade</p>
+              </div>
+              <div class="info-item">
+                <div class="info-label">
+                  <i data-lucide="calendar"></i>
+                  Data de Envio
+                </div>
+                <p class="info-valor-bold">15/04/2026</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="secao-card">
+            <h3>Descrição do Projeto</h3>
+            <p class="texto-descricao">Sistema web completo para gestão de atividades escolares, incluindo controle de alunos, professores, notas, frequência e comunicação entre escola e família. O projeto visa democratizar o acesso à tecnologia educacional e melhorar a qualidade do ensino através da digitalização de processos.</p>
+          </div>
+
+          <div class="secao-card">
+            <h3>Objetivos</h3>
+            <ul class="lista-objetivos">
+              <li>Facilitar a gestão acadêmica de instituições de ensino</li>
+              <li>Melhorar a comunicação entre escola, alunos e responsáveis</li>
+              <li>Automatizar processos administrativos e reduzir uso de papel</li>
+              <li>Fornecer dados para tomada de decisão pedagógica</li>
+            </ul>
+          </div>
+
+          <div class="secao-card">
+            <h3>Tecnologias Utilizadas</h3>
+            <p class="texto-descricao">React, Node.js, PostgreSQL, TypeScript, Tailwind CSS</p>
+          </div>
+
+          <div class="secao-card">
+            <a href="#" class="btn-download">
+              <i data-lucide="download"></i>
+              Download do Documento Completo (PDF)
+            </a>
+          </div>
+
+          <div class="secao-card">
+            <h3>
+              <i data-lucide="message-square"></i>
+              Histórico de Comentários
+            </h3>
+            <div class="comentario">
+              <div class="comentario-header">
+                <span class="comentario-autor">Prof. Carlos Mendes</span>
+                <span class="comentario-data">10/04/2026</span>
+              </div>
+              <p>Ótima proposta inicial! Gostaria de ver mais detalhes sobre a arquitetura do sistema e como você planeja garantir a segurança dos dados dos alunos.</p>
+            </div>
+            <div class="comentario">
+              <div class="comentario-header">
+                <span class="comentario-autor">João Vitor</span>
+                <span class="comentario-data">12/04/2026</span>
+              </div>
+              <p>Professor, adicionei um diagrama de arquitetura e documentação sobre segurança na seção de anexos. Implementei autenticação JWT e criptografia de dados sensíveis.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="avaliacao-direita">
+
+          <div class="secao-card">
+            <h3>Avaliação do Projeto</h3>
+
+            <p class="label-secao">Decisão</p>
+
+            <div class="opcao-decisao">
+              <i data-lucide="circle-check"></i>
+              <div>
+                <p class="opcao-titulo">Aprovar Projeto</p>
+                <p class="opcao-sub">Projeto atende todos os critérios</p>
+              </div>
+            </div>
+
+            <div class="opcao-decisao">
+              <i data-lucide="circle-x"></i>
+              <div>
+                <p class="opcao-titulo">Solicitar Revisão</p>
+                <p class="opcao-sub">Projeto necessita ajustes</p>
+              </div>
+            </div>
+
+            <p class="label-secao" style="margin-top: 20px;">Feedback e Comentários</p>
+
+            <textarea class="feedback-input" placeholder="Forneça um feedback detalhado sobre o projeto, destacando pontos fortes e áreas de melhoria..."></textarea>
+
+            <p class="feedback-aviso">Este comentário será visível para o estudante</p>
+
+            <button class="btn-enviar" id="btn-enviar">
+              <i data-lucide="send"></i>
+              Enviar Avaliação
+            </button>
+          </div>
+
+          <div class="secao-card criterios">
+            <h3>Critérios de Avaliação</h3>
+            <ul>
+              <li>Alinhamento com tema proposto</li>
+              <li>Viabilidade técnica</li>
+              <li>Impacto social/ambiental</li>
+              <li>Documentação completa</li>
+              <li>Inovação e criatividade</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script>
+    const itens = document.querySelectorAll('.menu-item');
+    itens.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (this.getAttribute('href') === '#') e.preventDefault();
+        itens.forEach(function(i) { i.classList.remove('ativo'); });
+        this.classList.add('ativo');
+      });
+    });
+
+    document.getElementById('btn-perfil').addEventListener('click', function() {
+      window.location.href = 'perfil.html';
+    });
+
+    document.getElementById('btn-enviar').addEventListener('click', function() {
+  const selecionado = document.querySelector('.opcao-decisao.selecionado');
+
+  if (!selecionado) {
+    alert('Selecione uma decisão antes de enviar!');
+    return;
+  }
+
+  const titulo = selecionado.querySelector('.opcao-titulo').textContent;
+
+  if (titulo === 'Aprovar Projeto') {
+    alert('Projeto aprovado com sucesso!');
+  } else {
+    alert('Revisão solicitada com sucesso!');
+  }
+});
+
+    document.querySelectorAll('.opcao-decisao').forEach(function(opcao) {
+      opcao.addEventListener('click', function() {
+        document.querySelectorAll('.opcao-decisao').forEach(function(o) {
+          o.classList.remove('selecionado');
+        });
+        this.classList.add('selecionado');
+      });
+    });
+
+    document.querySelector('.btn-download').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const notificacao = document.createElement('div');
+  notificacao.textContent = '✓ Download concluído';
+  notificacao.style.cssText = `
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    z-index: 9999;
+  `;
+
+  document.body.appendChild(notificacao);
+
+  setTimeout(function() {
+    document.body.removeChild(notificacao);
+  }, 3000);
+});
+
+  </script>
+
+</body>
+</html>

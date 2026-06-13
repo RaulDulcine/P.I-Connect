@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>PI Connect - Projetos</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="projetos.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="pagina">
+
+    <aside class="sidebar">
+      <div class="sidebar-topo">
+        <div class="sidebar-logo">
+          <h2>PI Connect</h2>
+          <p>Painel do Professor</p>
+        </div>
+
+        <div class="sidebar-usuario" id="btn-perfil">
+          <div class="avatar">CM</div>
+          <div>
+            <p class="nome-usuario">Prof. Carlos Mendes</p>
+            <p class="tipo-usuario">Professor</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="dashboard.html" class="menu-item">
+            <i data-lucide="layout-dashboard"></i>
+            Dashboard
+          </a>
+          <a href="projetos.html" class="menu-item ativo">
+            <i data-lucide="folder"></i>
+            Projetos Supervisionados
+          </a>
+          <a href="avaliacoes.html" class="menu-item">
+            <i data-lucide="file-text"></i>
+            Avaliações
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-rodape">
+        <a href="../index.html" class="menu-item sair">
+          <i data-lucide="log-out"></i>
+          Sair
+        </a>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+
+      <div class="boas-vindas">
+        <h1>Projetos Supervisionados</h1>
+        <p>Todos os projetos sob sua orientação acadêmica</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <p class="card-label">Total de Projetos</p>
+          <span class="numero">11</span>
+        </div>
+        <div class="card">
+          <p class="card-label">Aguardando Avaliação</p>
+          <span class="numero amarelo-texto">6</span>
+        </div>
+        <div class="card">
+          <p class="card-label">Aprovados</p>
+          <span class="numero verde-texto">5</span>
+        </div>
+      </div>
+
+      <div class="filtros">
+        <div class="busca">
+          <i data-lucide="search"></i>
+          <input type="text" placeholder="Buscar por título ou estudante...">
+        </div>
+        <button class="btn-filtro" id="btn-anos">Todos os Anos</button>
+        <button class="btn-filtro" id="btn-status">Todos os Status</button>
+
+        <div class="menu-dropdown" id="menu-status">
+          <div class="menu-opcao" data-valor="todos">Todos os Status</div>
+          <div class="menu-opcao" data-valor="aguardando">Aguardando Avaliação</div>
+          <div class="menu-opcao" data-valor="aprovado">Aprovado</div>
+        </div>
+
+        <div class="menu-dropdown" id="menu-anos">
+          <div class="menu-opcao" data-valor="todos">Todos os Anos</div>
+          <div class="menu-opcao" data-valor="2026">2026</div>
+          <div class="menu-opcao" data-valor="2025">2025</div>
+        </div>
+      </div>
+
+      <div class="tabela-container">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Estudante</th>
+              <th>Curso</th>
+              <th>Tema</th>
+              <th>Ano</th>
+              <th>Data de Envio</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="titulo-projeto">Sistema de Gestão Escolar</td>
+              <td>Raul Francisco</td>
+              <td>ADS</td>
+              <td>ODS 4 - Educação</td>
+              <td>2026</td>
+              <td>15/04/2026</td>
+              <td><span class="badge">Aguardando Avaliação</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">App de Sustentabilidade Urbana</td>
+              <td>Alice Ralime</td>
+              <td>ADS</td>
+              <td>ODS 11 - Cidades Sustentáveis</td>
+              <td>2026</td>
+              <td>14/04/2026</td>
+              <td><span class="badge">Aguardando Avaliação</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Dashboard de Métricas ESG</td>
+              <td>João Vitor</td>
+              <td>ADS</td>
+              <td>ESG - Governança</td>
+              <td>2026</td>
+              <td>12/04/2026</td>
+              <td><span class="badge">Aguardando Avaliação</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Plataforma de Economia Circular</td>
+              <td>Julia Parra</td>
+              <td>ADS</td>
+              <td>ESG - Ambiental</td>
+              <td>2026</td>
+              <td>10/04/2026</td>
+              <td><span class="badge">Aguardando Avaliação</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Impacto Circular</td>
+              <td>Agatha Helena</td>
+              <td>ADS</td>
+              <td>ESG - Ambiental</td>
+              <td>2026</td>
+              <td>09/04/2026</td>
+              <td><span class="badge">Aguardando Avaliação</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Portal de Inclusão Digital</td>
+              <td>Mariana Santos</td>
+              <td>ADS</td>
+              <td>ODS 10 - Redução Desigualdades</td>
+              <td>2026</td>
+              <td>08/04/2026</td>
+              <td><span class="badge badge-aprovado">Aprovado</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Sistema de Energia Renovável</td>
+              <td>Rafael Oliveira</td>
+              <td>ADS</td>
+              <td>ODS 7 - Energia Limpa</td>
+              <td>2026</td>
+              <td>05/04/2026</td>
+              <td><span class="badge">Aguardando Avaliação</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">App de Gestão de Resíduos</td>
+              <td>Juliana Rocha</td>
+              <td>ADS</td>
+              <td>ODS 12 - Consumo Responsável</td>
+              <td>2026</td>
+              <td>02/04/2026</td>
+              <td><span class="badge badge-aprovado">Aprovado</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Plataforma de Educação Ambiental</td>
+              <td>Pedro Alves</td>
+              <td>ADS</td>
+              <td>ODS 4 - Educação</td>
+              <td>2026</td>
+              <td>28/03/2026</td>
+              <td><span class="badge badge-aprovado">Aprovado</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Sistema de Monitoramento Ambiental</td>
+              <td>Camila Ferreira</td>
+              <td>ADS</td>
+              <td>ESG - Ambiental</td>
+              <td>2025</td>
+              <td>20/03/2026</td>
+              <td><span class="badge badge-aprovado">Aprovado</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+            <tr>
+              <td class="titulo-projeto">Portal de Transparência Corporativa</td>
+              <td>Lucas Martins</td>
+              <td>ADS</td>
+              <td>ESG - Governança</td>
+              <td>2025</td>
+              <td>15/03/2026</td>
+              <td><span class="badge badge-aprovado">Aprovado</span></td>
+              <td><a href="avaliacoes.html" class="btn-avaliar"><i data-lucide="eye"></i> Avaliar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script>
+    const itens = document.querySelectorAll('.menu-item');
+    itens.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (this.getAttribute('href') === '#') e.preventDefault();
+        itens.forEach(function(i) { i.classList.remove('ativo'); });
+        this.classList.add('ativo');
+      });
+    });
+
+    document.getElementById('btn-perfil').addEventListener('click', function() {
+      window.location.href = 'perfil.html';
+    });
+
+    document.querySelector('.busca input').addEventListener('input', function() {
+      const termo = this.value.toLowerCase();
+      document.querySelectorAll('.tabela tbody tr').forEach(function(linha) {
+        const titulo = linha.querySelectorAll('td')[0].textContent.toLowerCase();
+        const estudante = linha.querySelectorAll('td')[1].textContent.toLowerCase();
+        if (titulo.includes(termo) || estudante.includes(termo)) {
+          linha.style.display = '';
+        } else {
+          linha.style.display = 'none';
+        }
+      });
+    });
+
+    document.getElementById('btn-status').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('menu-status').classList.toggle('aberto');
+      document.getElementById('menu-anos').classList.remove('aberto');
+    });
+
+    document.getElementById('btn-anos').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('menu-anos').classList.toggle('aberto');
+      document.getElementById('menu-status').classList.remove('aberto');
+    });
+
+    document.addEventListener('click', function() {
+      document.getElementById('menu-status').classList.remove('aberto');
+      document.getElementById('menu-anos').classList.remove('aberto');
+    });
+
+    document.querySelectorAll('#menu-status .menu-opcao').forEach(function(opcao) {
+      opcao.addEventListener('click', function() {
+        const valor = this.getAttribute('data-valor');
+        const texto = this.textContent;
+        document.getElementById('btn-status').textContent = texto;
+        document.getElementById('menu-status').classList.remove('aberto');
+        document.querySelectorAll('#menu-status .menu-opcao').forEach(function(o) {
+          o.classList.remove('selecionado');
+        });
+        this.classList.add('selecionado');
+
+        if (valor === 'todos') {
+          document.getElementById('btn-status').classList.remove('ativo');
+        } else {
+          document.getElementById('btn-status').classList.add('ativo');
+        }
+
+        document.querySelectorAll('.tabela tbody tr').forEach(function(linha) {
+          const status = linha.querySelector('.badge, .badge-aprovado').textContent.trim();
+          if (valor === 'todos') {
+            linha.style.display = '';
+          } else if (valor === 'aguardando' && status.includes('Aguardando')) {
+            linha.style.display = '';
+          } else if (valor === 'aprovado' && status === 'Aprovado') {
+            linha.style.display = '';
+          } else {
+            linha.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    document.querySelectorAll('#menu-anos .menu-opcao').forEach(function(opcao) {
+      opcao.addEventListener('click', function() {
+        const valor = this.getAttribute('data-valor');
+        const texto = this.textContent;
+        document.getElementById('btn-anos').textContent = texto;
+        document.getElementById('menu-anos').classList.remove('aberto');
+        document.querySelectorAll('#menu-anos .menu-opcao').forEach(function(o) {
+          o.classList.remove('selecionado');
+        });
+        this.classList.add('selecionado');
+        document.querySelectorAll('.tabela tbody tr').forEach(function(linha) {
+          const ano = linha.querySelectorAll('td')[4].textContent.trim();
+          if (valor === 'todos' || ano === valor) {
+            linha.style.display = '';
+          } else {
+            linha.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get('status');
+
+    if (status === 'aguardando') {
+      document.getElementById('btn-status').textContent = 'Aguardando Avaliação';
+      document.getElementById('btn-status').classList.add('ativo');
+      document.querySelectorAll('.tabela tbody tr').forEach(function(linha) {
+        const s = linha.querySelector('.badge, .badge-aprovado').textContent.trim();
+        if (!s.includes('Aguardando')) linha.style.display = 'none';
+      });
+    } else if (status === 'aprovado') {
+      document.getElementById('btn-status').textContent = 'Aprovado';
+      document.getElementById('btn-status').classList.add('ativo');
+      document.querySelectorAll('.tabela tbody tr').forEach(function(linha) {
+        const s = linha.querySelector('.badge, .badge-aprovado').textContent.trim();
+        if (s !== 'Aprovado') linha.style.display = 'none';
+      });
+    }
+</script>
+
+
+
+</body>
+</html>

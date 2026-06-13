@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>PI Connect</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="pagina">
+
+    <aside class="sidebar">
+      <div class="sidebar-topo">
+        <div class="sidebar-logo">
+          <h2>PI Connect</h2>
+          <p>Painel do Professor</p>
+        </div>
+
+        <div class="sidebar-usuario" id="btn-perfil">
+          <div class="avatar">CM</div>
+          <div>
+            <p class="nome-usuario">Prof. Carlos Mendes</p>
+            <p class="tipo-usuario">Professor</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a href="dashboard.html" class="menu-item ativo">
+            <i data-lucide="layout-dashboard"></i>
+            Dashboard
+          </a>
+          <a href="projetos.html" class="menu-item">
+            <i data-lucide="folder"></i>
+            Projetos Supervisionados
+          </a>
+          <a href="avaliacoes.html" class="menu-item">
+            <i data-lucide="file-text"></i>
+            Avaliações
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-rodape">
+        <a href="../index.html" class="menu-item sair">
+          <i data-lucide="log-out"></i>
+          Sair
+        </a>
+      </div>
+    </aside>
+
+    <main class="conteudo">
+
+      <div class="boas-vindas">
+        <h1>Bem-vindo, Professor Carlos Mendes!</h1>
+        <p>Resumo dos projetos sob sua orientação</p>
+      </div>
+
+      <div class="cards">
+  <div class="card" onclick="window.location.href='projetos.html'">
+    <div class="card-icone laranja">
+      <i data-lucide="clipboard-list"></i>
+    </div>
+    <span class="numero">11</span>
+    <p>Projetos Supervisionados</p>
+  </div>
+  <div class="card" onclick="window.location.href='projetos.html?status=aguardando'">
+    <div class="card-icone amarelo">
+      <i data-lucide="clock"></i>
+    </div>
+    <span class="numero">6</span>
+    <p>Aguardando Avaliação</p>
+  </div>
+  <div class="card" onclick="window.location.href='projetos.html?status=aprovado'">
+    <div class="card-icone verde">
+      <i data-lucide="circle-check"></i>
+    </div>
+    <span class="numero">5</span>
+    <p>Aprovados</p>
+  </div>
+</div>
+
+      <div class="secao-inferior">
+
+        <div class="tabela-projetos">
+          <div class="tabela-header">
+            <h3>Projetos Pendentes de Avaliação</h3>
+            <a href="projetos.html">Ver todos</a>
+          </div>
+
+          <div class="projeto-linha">
+            <div>
+              <p class="projeto-nome">Sistema de Gestão Escolar</p>
+              <p class="projeto-aluno">Raul Francisco • ADS</p>
+            </div>
+            <span class="data">15/04/2026</span>
+            <span class="badge">Aguardando Avaliação</span>
+          </div>
+
+          <div class="projeto-linha">
+            <div>
+              <p class="projeto-nome">App de Sustentabilidade Urbana</p>
+              <p class="projeto-aluno">Alice Ralime • ADS</p>
+            </div>
+            <span class="data">14/04/2026</span>
+            <span class="badge">Aguardando Avaliação</span>
+          </div>
+
+          <div class="projeto-linha">
+            <div>
+              <p class="projeto-nome">Dashboard de Métricas ESG</p>
+              <p class="projeto-aluno">João Vitor • ADS</p>
+            </div>
+            <span class="data">12/04/2026</span>
+            <span class="badge">Aguardando Avaliação</span>
+          </div>
+
+          <div class="projeto-linha">
+            <div>
+              <p class="projeto-nome">Plataforma de Economia Circular</p>
+              <p class="projeto-aluno">Julia Parra • ADS</p>
+            </div>
+            <span class="data">10/04/2026</span>
+            <span class="badge">Aguardando Avaliação</span>
+          </div>
+
+          <div class="projeto-linha">
+            <div>
+              <p class="projeto-nome">Impacto Circular</p>
+              <p class="projeto-aluno">Agatha Helena • ADS</p>
+            </div>
+            <span class="data">09/04/2026</span>
+            <span class="badge">Aguardando Avaliação</span>
+          </div>
+
+        </div>
+
+        <div class="atividade">
+          <h3>Atividade Recente</h3>
+
+          <div class="atividade-item">
+            <p><strong>Raul Francisco</strong> enviou</p>
+            <p class="atividade-projeto">"Sistema de Gestão Escolar"</p>
+            <p class="atividade-tempo">2 horas atrás</p>
+          </div>
+
+          <div class="atividade-item">
+            <p><strong>Alice Ralime</strong> atualizou</p>
+            <p class="atividade-projeto">"App de Sustentabilidade Urbana"</p>
+            <p class="atividade-tempo">5 horas atrás</p>
+          </div>
+
+          <div class="atividade-item">
+            <p><strong>João Vitor</strong> respondeu comentário em</p>
+            <p class="atividade-projeto">"Portal de Inclusão Digital"</p>
+            <p class="atividade-tempo">1 dia atrás</p>
+          </div>
+
+          <div class="atividade-item">
+            <p><strong>Julia Parra</strong> enviou</p>
+            <p class="atividade-projeto">"Sistema de Energia Renovável"</p>
+            <p class="atividade-tempo">5 dias atrás</p>
+          </div>
+
+          <div class="atividade-item">
+            <p><strong>Agatha Helena</strong> enviou</p>
+            <p class="atividade-projeto">"Impacto Circular"</p>
+            <p class="atividade-tempo">6 dias atrás</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script>
+    const itens = document.querySelectorAll('.menu-item');
+    itens.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        if (this.getAttribute('href') === '#') e.preventDefault();
+        itens.forEach(function(i) { i.classList.remove('ativo'); });
+        this.classList.add('ativo');
+      });
+    });
+
+    document.getElementById('btn-perfil').addEventListener('click', function() {
+      window.location.href = 'perfil.html';
+    });
+  </script>
+
+</body>
+</html>
